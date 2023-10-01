@@ -74,12 +74,29 @@ hr{
 
 .lf__mainTag .lf__containerOfPrices .__containerOfPrices-element{
     border: 1px solid var(--color3);
-    background-color: var(--color1);
     border-radius: 1em;
-    padding: 1em 1em 0 1em;
+    padding: 1em 1em 2em 1em;
     flex: 1 0 10em;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element::before{
+    /* Superposición predefinida */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  opacity: 0;
+  transition: opacity 0.3s; 
+  border-radius: 1em;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element:hover::before {
+    opacity: .3;
+  }
 
 .lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .aux-container{
     padding: .5em 1em .5em 1em;
@@ -118,7 +135,7 @@ hr{
 }
 
 .lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-main{
-    margin: 0 0 6em 0;
+    margin: 0 0 2em 0;
 }
 
 .lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-main .itemsContainer .itemElement{
@@ -139,43 +156,36 @@ hr{
 }
 
 .lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-footer{
-    width: 100%;
-    padding: 2em .5em 2em .5em;
-    height: 4em;
-    bottom: 0;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0 0 3em 0;
+    position: relative;
+    height: 2.5em;
 }
 
 .lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-footer button{
-    width: 100%;
-    padding: 1em 1em 1em 1em;
-    color: var(--color2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
     border-radius: .5em;
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;    
-    transition: all .3s;
+    border: none;
+    background-color: rgb(23, 23, 23);
+    text-align: center;
+    color: var(--color2);
+    font-weight: bolder;
+    box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+-webkit-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+-moz-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+transition: all .3s;
 }
 
 .lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-footer button:hover{
-    background: linear-gradient(to right, rgb(161, 158, 158), rgb(147, 140, 140), rgb(213, 201, 201), rgb(230, 220, 220));
-    transition: all .4s;
-    color: var(--color1);
+    box-shadow: 0px 0px 15px 1px rgba(231,217,217,0.43);
+-webkit-box-shadow: 0px 0px 15px 1px rgba(231,217,217,0.43);
+-moz-box-shadow: 0px 0px 15px 1px rgba(231,217,217,0.43);
 }
-
-.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-footer button svg{
-    fill: var(--color2);
-}
-
 
 
 .lf__mainTag .lf__containerOfPrices .__containerOfPrices-element.packRecomended{
     padding: 2em 1em 2em 1em;
-    position: relative;
     box-shadow: 0px 0px 15px 1px rgba(231,217,217,0.43);
 -webkit-box-shadow: 0px 0px 15px 1px rgba(231,217,217,0.43);
 -moz-box-shadow: 0px 0px 15px 1px rgba(231,217,217,0.43);
@@ -185,4 +195,45 @@ hr{
     box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
 -webkit-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
 -moz-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+}
+
+.lf__footerTag{
+    width: 100%;
+}
+
+.lf__footerTag .contactContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    min-height: 6em;
+    border-top: 1px solid var(--color3);
+    background-color: black;
+    padding: 4em 0 4em 0;
+}
+
+.lf__footerTag .contactContainer .elementContact svg{
+    fill: var(--color3);
+    height: 1.3em;
+    transition: all .3s;
+}
+
+.lf__footerTag .contactContainer .elementContact svg:hover{
+    fill: var(--color3);
+    box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+-webkit-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+-moz-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+}
+
+@media (width >= 400px){
+    h1{
+        font-size: 3em;
+    }
+    .lf__headerTag .headerTag__header .logo img{
+        height: 4em;
+    }
+    .lf__footerTag .contactContainer .elementContact svg{
+        fill: var(--color3);
+        height: 2em;
+    }
 }
