@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Manrope:wght@600&family=Montserrat&family=Noto+Sans+Shavian&family=Nunito&family=PT+Sans&family=Roboto:wght@100&family=Rubik&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: rgb(16, 16, 16);
+    --color2: rgb(201, 201, 201);
+    --color3: rgb(212, 212, 212);
+}
+
+html,
+body {
+    min-height: 100vh;
+    background-color: var(--color1);
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+}
+
+tbody {
+    height: 100%;
+}
+
+hr{
+    height: 1px;
+    margin: 0 1em 0 1em;
+}
+
+/*---Esto es teniendo en cuenta los 280 iniciales*/
+
+/*HEADER TAG*/
+
+.lf__headerTag{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 1em 0 1em;
+    gap: 1em;
+}
+.lf__headerTag .headerTag__header{
+    display: flex;
+    justify-content: center;
+}
+
+.lf__headerTag .headerTag__header .logo{
+    filter: invert(100%);
+}
+
+.lf__headerTag .headerTag__header .logo img{
+    height: 3em;
+}
+
+.lf__headerTag .headerTag__main{
+    text-align: center;
+}
+
+.lf__headerTag .headerTag__main p{
+    color: var(--color2);
+}
+
+/*MAIN TAG*/
+
+.lf__mainTag{
+    padding: 2em 1em 3em 1em;
+}
+
+.lf__mainTag .lf__containerOfPrices{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element{
+    border: 1px solid var(--color3);
+    background-color: var(--color1);
+    border-radius: 1em;
+    padding: 1em 1em 0 1em;
+    flex: 1 0 10em;
+    position: relative;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .aux-container{
+    padding: .5em 1em .5em 1em;
+    border-radius: 1em;
+    background: linear-gradient(to right, rgb(172, 4, 172), rgb(198, 68, 198), rgb(228, 181, 228));
+    color: white;
+    width: max-content;
+    position: absolute;
+    margin: -3em auto 0 auto;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+-webkit-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+-moz-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element p{
+    color: var(--color3);
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-main .itemsContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0 0 1em;
+    gap: 1.5em;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-header{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-header .pricePack{
+    font-size: 2.5em;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-main{
+    margin: 0 0 6em 0;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-main .itemsContainer .itemElement{
+    display: flex;
+    align-items: start;
+    gap: .5em;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-main .itemsContainer .itemElement .logo{
+    fill: var(--color2);
+    display: flex;
+    align-items: center;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-main .itemsContainer .itemElement .text{
+    display: flex;
+    align-items: start;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-footer{
+    width: 100%;
+    padding: 2em .5em 2em .5em;
+    height: 4em;
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 0 3em 0;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-footer button{
+    width: 100%;
+    padding: 1em 1em 1em 1em;
+    color: var(--color2);
+    border-radius: .5em;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;    
+    transition: all .3s;
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-footer button:hover{
+    background: linear-gradient(to right, rgb(161, 158, 158), rgb(147, 140, 140), rgb(213, 201, 201), rgb(230, 220, 220));
+    transition: all .4s;
+    color: var(--color1);
+}
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element .__element-footer button svg{
+    fill: var(--color2);
+}
+
+
+
+.lf__mainTag .lf__containerOfPrices .__containerOfPrices-element.packRecomended{
+    padding: 2em 1em 2em 1em;
+    position: relative;
+    box-shadow: 0px 0px 15px 1px rgba(231,217,217,0.43);
+-webkit-box-shadow: 0px 0px 15px 1px rgba(231,217,217,0.43);
+-moz-box-shadow: 0px 0px 15px 1px rgba(231,217,217,0.43);
+}
+
+.packSimple{
+    box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+-webkit-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+-moz-box-shadow: 0px 0px 10px 1px rgba(231,217,217,0.17);
+}
